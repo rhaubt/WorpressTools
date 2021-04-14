@@ -39,7 +39,7 @@ function data_fetch(){
     if( $the_query->have_posts() ) :
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
             
-            <h2><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h2>
+            <h2><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a><?php the_content(); ?></h2>
 
         <?php endwhile;
         wp_reset_postdata();  
